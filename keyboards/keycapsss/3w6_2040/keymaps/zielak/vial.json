@@ -1,0 +1,239 @@
+{
+    "name": "3w6 RP2040 (zielak)",
+    "lighting": "qmk_rgblight",
+    "vendorId": "0x7983",
+    "productId": "0x3357",
+    "matrix": {
+        "rows": 8,
+        "cols": 5
+    },
+    "customKeycodes": [
+        { "shortName": "Quit", "title": "CMD+Q / ALT+F4", "name": "K_QUIT" },
+        { "shortName": "Close", "title": "CMD+W / CTRL+W", "name": "K_CLOSE" },
+        { "shortName": "Find", "title": "CMD+F / CTRL+F", "name": "K_FIND" },
+        { "shortName": "Undo", "title": "CMR+Z / CTRL+Z", "name": "K_UNDO" },
+        { "shortName": "Redo", "title": "CMD+Y / CTRL+Y", "name": "K_REDO" },
+        { "shortName": "Cut", "title": "CMD+X / CTRL+X", "name": "K_CUT" },
+        { "shortName": "Copy", "title": "CMD+C / CTRL+C", "name": "K_COPY" },
+        { "shortName": "Paste", "title": "CMD+V / CTRL+V", "name": "K_PASTE" },
+        { "shortName": "Indnt>", "title": "Add indent (CMD/CTRL + ])", "name": "K_INDEL" },
+        { "shortName": "Indnt<", "title": "Remove indent (CMD/CTRL + [)", "name": "K_INDER" },
+        { "shortName": "\"=>\"", "title": "Write '=>' for arrow functions", "name": "K_ARROW" },
+        { "shortName": "Term", "title": "Terminal", "name": "K_TERMI" }
+    ],
+    "layouts": {
+        "keymap": [
+            [
+                {
+                    "x": 2
+                },
+                "0,2",
+                {
+                    "x": 7.75
+                },
+                "4,2"
+            ],
+            [
+                {
+                    "y": -0.75,
+                    "x": 1
+                },
+                "0,1",
+                {
+                    "x": 1
+                },
+                "0,3",
+                {
+                    "x": 5.75
+                },
+                "4,3",
+                {
+                    "x": 1
+                },
+                "4,1"
+            ],
+            [
+                {
+                    "y": -0.75,
+                    "x": 4
+                },
+                "0,4",
+                {
+                    "x": 3.75
+                },
+                "4,4"
+            ],
+            [
+                {
+                    "y": -0.75
+                },
+                "0,0",
+                {
+                    "x": 11.75
+                },
+                "4,0"
+            ],
+            [
+                {
+                    "y": -0.75,
+                    "x": 2
+                },
+                "1,2",
+                {
+                    "x": 7.75
+                },
+                "5,2"
+            ],
+            [
+                {
+                    "y": -0.75,
+                    "x": 1
+                },
+                "1,1",
+                {
+                    "x": 1
+                },
+                "1,3",
+                {
+                    "x": 5.75
+                },
+                "5,3",
+                {
+                    "x": 1
+                },
+                "5,1"
+            ],
+            [
+                {
+                    "y": -0.75,
+                    "x": 4
+                },
+                "1,4",
+                {
+                    "x": 3.75
+                },
+                "5,4"
+            ],
+            [
+                {
+                    "y": -0.75
+                },
+                "1,0",
+                {
+                    "x": 11.75
+                },
+                "5,0"
+            ],
+            [
+                {
+                    "y": -0.75,
+                    "x": 2
+                },
+                "2,2",
+                {
+                    "x": 7.75
+                },
+                "6,2"
+            ],
+            [
+                {
+                    "y": -0.75,
+                    "x": 1
+                },
+                "2,1",
+                {
+                    "x": 1
+                },
+                "2,3",
+                {
+                    "x": 5.75
+                },
+                "6,3",
+                {
+                    "x": 1
+                },
+                "6,1"
+            ],
+            [
+                {
+                    "y": -0.75,
+                    "x": 4
+                },
+                "2,4",
+                {
+                    "x": 3.75
+                },
+                "6,4"
+            ],
+            [
+                {
+                    "y": -0.75
+                },
+                "2,0",
+                {
+                    "x": 11.75
+                },
+                "6,0"
+            ],
+            [
+                {
+                    "r": 3,
+                    "rx": 10.75,
+                    "ry": 4,
+                    "y": -0.3500000000000001,
+                    "x": -0.75
+                },
+                "7,2"
+            ],
+            [
+                {
+                    "r": 15,
+                    "rx": 4.5,
+                    "ry": 4.25,
+                    "y": -0.5,
+                    "x": -0.5
+                },
+                "3,3"
+            ],
+            [
+                {
+                    "r": 36,
+                    "rx": 5.75,
+                    "y": -0.5,
+                    "x": -0.25,
+                    "h": 1.5
+                },
+                "3,4"
+            ],
+            [
+                {
+                    "r": -36,
+                    "rx": 8,
+                    "y": -0.5,
+                    "x": -0.75,
+                    "h": 1.5
+                },
+                "7,4"
+            ],
+            [
+                {
+                    "r": -15,
+                    "rx": 9.5,
+                    "y": -0.5,
+                    "x": -0.75
+                },
+                "7,3"
+            ],
+            [
+                {
+                    "r": -3,
+                    "rx": 3.25,
+                    "ry": 4,
+                    "y": -0.3500000000000001,
+                    "x": -0.5
+                },
+                "3,2"
+            ]
+        ]
+    }
+}
