@@ -9,9 +9,16 @@
 #define VIAL_UNLOCK_COMBO_COLS \
     { 0, 0 }
 
-#define VIAL_COMBO_ENTRIES 5 // number of combos used, each entry take 10 byte in EEPROM
+#ifdef VIAL_ENABLE
+// number of combos used, each entry take 10 byte in EEPROM
+#    define VIAL_COMBO_ENTRIES 5
+#endif
+#ifndef VIAL_ENABLE
+#    define COMBO_COUNT 2
+#    define COMBO_STRICT_TIMER
+#endif
 
-#define TAPPING_TERM 200
+#define TAPPING_TERM 175
 #undef HOLD_ON_OTHER_KEY_PRESS
 #define TAPPING_TOGGLE 2
 
