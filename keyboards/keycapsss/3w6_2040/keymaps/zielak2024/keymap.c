@@ -50,7 +50,7 @@ static uint16_t numTapCount  = 0;
 // #define NUM_L TT(_NUM)
 // #define NUMPD_L TG(_NUM_PAD)
 // #define TAP_ALT KC_F18
-#define SYM_L LT(_SYM, KC_F18) // FIXME: figure it out
+#define SYM_L LT(_SYM, KC_F18)
 
 // Which key do you use to enter a layer
 #define _ENTRY_ _______
@@ -154,7 +154,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      //|--------+--------+--------+--------+--------|           |--------+--------+--------+--------+--------+
         KC_AT   ,KC_DLR  ,KC_UNDS ,KC_SCLN ,KC_MINS ,            KC_GRV  ,KC_LPRN ,KC_RPRN ,KC_DQUO ,KC_PIPE ,
      //|--------+--------+--------+--------+--------|           |--------+--------+--------+--------+--------+
-        KC_TILD ,KC_HASH ,KC_CIRC ,KC_PSLS ,KC_PAST ,            XXXXXXX ,KC_LBRC ,KC_RBRC ,KC_BSLS ,XXXXXXX ,
+        KC_TILD ,KC_HASH ,KC_CIRC ,KC_PSLS ,KC_PAST ,            XXXXXXX ,KC_LBRC ,KC_RBRC ,KC_QUOT ,KC_BSLS ,
      //|--------+--------+--------+--------+--------+---|  |----+--------+--------+--------+--------+--------|
                               XXXXXXX ,KC_CAPS ,_______ ,   XXXXXXX ,_ENTRY_ ,XXXXXXX
                            //`--------------------------'  `--------------------------'
@@ -238,7 +238,6 @@ bool tap_num_layers(keyrecord_t *record) {
             numTapCount++;
         }
     }
-
 
     dprintf("tap_num_layers - TAPPING_TERM: %d, now: %d, last: %d, TAPcount: %d\n", TAPPING_TERM, record->event.time, numTimestamp, record->tap.count);
     // Did double tap
@@ -448,26 +447,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 }
                 return true;
             }
-            // } else {
-            //     if (record->event.pressed) {
-            //         register_code(KC_LCTL);
-            //         if(keycode == APP_PRV) {
-            //             register_code(KC_LSFT);
-            //         }
-            //         tap_code(KC_TAB);
-            //         if(keycode == APP_PRV) {
-            //             unregister_code(KC_LSFT);
-            //         }
-            //         unregister_code(KC_LCTL);
-            //     }
-            // }
             return false;
         case NAV_L:
             if (!record->event.pressed && isSwappingApps) {
                 isSwappingApps = false;
                 unregister_code(isOnMac ? KC_LGUI : KC_LALT);
                 unregister_code(KC_TAB);
-                // return false;
             }
             return true;
         case K_UNDO:
