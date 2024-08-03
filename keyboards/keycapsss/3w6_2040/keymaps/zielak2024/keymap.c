@@ -150,11 +150,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_SYM] = LAYOUT_split_3x5_3(
      //,--------------------------------------------.           ,--------------------------------------------.
-        KC_QUES ,KC_EXLM ,K_ARROW ,KC_COLN ,KC_PPLS ,            XXXXXXX ,KC_LCBR ,KC_RCBR ,KC_AMPR ,_______ ,
+        KC_QUES ,KC_EXLM ,K_ARROW ,KC_COLN ,KC_PPLS ,            XXXXXXX ,KC_LCBR ,KC_DQUO ,KC_RCBR ,KC_EQL  ,
      //|--------+--------+--------+--------+--------|           |--------+--------+--------+--------+--------+
-        KC_AT   ,KC_DLR  ,KC_UNDS ,KC_SCLN ,KC_MINS ,            KC_GRV  ,KC_LPRN ,KC_RPRN ,KC_DQUO ,KC_PIPE ,
+        KC_AT   ,KC_DLR  ,KC_UNDS ,KC_SCLN ,KC_MINS ,            KC_AMPR ,KC_LPRN ,KC_QUOT ,KC_RPRN ,KC_PIPE ,
      //|--------+--------+--------+--------+--------|           |--------+--------+--------+--------+--------+
-        KC_TILD ,KC_HASH ,KC_CIRC ,KC_PSLS ,KC_PAST ,            XXXXXXX ,KC_LBRC ,KC_RBRC ,KC_QUOT ,KC_BSLS ,
+        KC_TILD ,KC_HASH ,KC_CIRC ,KC_PSLS ,KC_PAST ,            KC_SLASH,KC_LBRC ,KC_GRV  ,KC_RBRC ,KC_BSLS ,
      //|--------+--------+--------+--------+--------+---|  |----+--------+--------+--------+--------+--------|
                               XXXXXXX ,KC_CAPS ,_______ ,   XXXXXXX ,_ENTRY_ ,XXXXXXX
                            //`--------------------------'  `--------------------------'
