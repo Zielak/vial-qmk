@@ -73,13 +73,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     unregister_code(KC_LSFT);
                 }
             } else {
-                if (isOnMac) {
-                    unregister_code(KC_LGUI);
-                    unregister_code(KC_LSFT);
-                } else {
-                    unregister_code(KC_LGUI);
-                    unregister_code(KC_LSFT);
-                }
+                unregister_code(KC_LGUI);
+                unregister_code(KC_LSFT);
             }
             return false;
         case APP_NXT:
@@ -124,6 +119,25 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return tap_ctrl_and_key(KC_F, record);
         case K_CLOSE:
             return tap_ctrl_and_key(KC_W, record);
+        case K_QUIT:
+            if (record->event.pressed) {
+                if (isOnMac) {
+                    register_code(KC_LGUI);
+                    tap_code(KC_Q);
+                    unregister_code(KC_LGUI);
+                } else {
+                    register_code(KC_LALT);
+                    tap_code(KC_F4);
+                    unregister_code(KC_LALT);
+                }
+            } else {
+                if (isOnMac) {
+                    unregister_code(KC_LGUI);
+                } else {
+                    unregister_code(KC_LALT);
+                }
+            }
+            return false;
         case K_ARROW:
             if (record->event.pressed) {
                 SEND_STRING("=>");
