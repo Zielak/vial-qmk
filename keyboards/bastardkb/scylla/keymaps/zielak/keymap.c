@@ -21,7 +21,7 @@
 // Aliases to make keymap more readable
 #define FNK_L MO(_FNK)
 #define NAV_L MO(_NAV)
-#define NUM_L TT(_NUM)
+#define NUM_L MO(_NUM)
 // #define NUMPD_L TG(_NUM_PAD)
 // #define TAP_ALT KC_F18
 // #define SYM_L LT(_SYM, KC_F18)
