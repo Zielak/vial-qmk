@@ -154,6 +154,27 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 unregister_code(KC_LCTL);
             }
             return false;
+        case K_EMOJI:
+            if (record->event.pressed) {
+                if (isOnMac) {
+                    register_code(KC_LGUI);
+                    register_code(KC_LCTL);
+                    tap_code(KC_SPC);
+                    unregister_code(KC_LGUI);
+                    unregister_code(KC_LCTL);
+                } else {
+                    register_code(KC_LCTL);
+                    tap_code(KC_DOT);
+                    unregister_code(KC_LCTL);
+                }
+            } else {
+                if (isOnMac) {
+                    unregister_code(KC_LGUI);
+                    unregister_code(KC_LCTL);
+                } else {
+                    unregister_code(KC_LCTL);
+                }
+            }
         default:
             return true; // Process all other keycodes normally
     }

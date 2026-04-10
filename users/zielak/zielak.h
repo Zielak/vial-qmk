@@ -28,6 +28,7 @@ enum custom_keycodes {
     K_INDER,
     K_ARROW,
     K_TERMI,
+    K_EMOJI,
     APP_NXT,
     APP_PRV,
 };
