@@ -3,9 +3,11 @@
 void my_custom_function(void) {}
 
 // App swapping and Print screen are different on Mac...
-static uint16_t ctrlKey        = KC_LGUI;
-static bool     isOnMac        = true;
-static bool     isSwappingApps = false;
+static uint16_t ctrlKey = KC_LGUI;
+static bool     isOnMac = true;
+
+static bool     isSwappingApps     = false;
+static bool     isSwappingDesktops = false;
 
 // static bool     numActive    = false;
 // static bool     numLocked    = false;
@@ -98,9 +100,40 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 return true;
             }
             return false;
+        case DSK_NXT:
+        case DSK_PRV:
+            // Only accept while on layer NAV
+            if (current_layer == _NAV || isSwappingDesktops) {
+                if (record->event.pressed) {
+                    isSwappingDesktops = true;
+
+                    register_code(KC_LCTL);
+                    if (!isOnMac) {
+                        register_code(KC_LGUI);
+                    }
+
+                    if (keycode == DSK_PRV) {
+                        tap_code(KC_LEFT);
+                    } else if (keycode == DSK_NXT) {
+                        tap_code(KC_RIGHT);
+                    }
+                } else {
+                    unregister_code(KC_LCTL);
+                    if (!isOnMac) {
+                        unregister_code(KC_LGUI);
+                    }
+                }
+                return true;
+            }
+            return false;
         case NAV_L:
             if (!record->event.pressed && isSwappingApps) {
                 isSwappingApps = false;
+                unregister_code(isOnMac ? KC_LGUI : KC_LALT);
+                unregister_code(KC_TAB);
+            }
+            if (!record->event.pressed && isSwappingDesktops) {
+                isSwappingDesktops = false;
                 unregister_code(isOnMac ? KC_LGUI : KC_LALT);
                 unregister_code(KC_TAB);
             }

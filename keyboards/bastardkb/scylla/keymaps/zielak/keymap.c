@@ -62,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //---------------------------------------------------------//-------------------------------------------------------//
         _______, KC_LCTL ,KC_LALT ,KC_LSFT ,KC_LGUI ,XXXXXXX,       KC_PGDN ,KC_LEFT ,KC_DOWN ,KC_RIGHT,XXXXXXX, XXXXXXX,
         //---------------------------------------------------------//-------------------------------------------------------//
-        _______, K_UNDO  ,K_CUT   ,K_COPY  ,K_PASTE ,K_REDO,        XXXXXXX ,XXXXXXX ,K_INDEL ,K_INDER ,KC_INS , XXXXXXX,
+        _______, XXXXXXX ,DSK_PRV ,DSK_NXT ,XXXXXXX ,XXXXXXX,       XXXXXXX ,XXXXXXX ,K_INDEL ,K_INDER ,KC_INS , XXXXXXX,
         //---------------------------------------------------------//-------------------------------------------------------//
                 _ENTRY_, XXXXXXX, XXXXXXX,                  _______, _______, _______,
                          XXXXXXX, XXXXXXX,                  _______, _______

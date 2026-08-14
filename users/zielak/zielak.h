@@ -31,6 +31,8 @@ enum custom_keycodes {
     K_EMOJI,
     APP_NXT,
     APP_PRV,
+    DSK_NXT,
+    DSK_PRV,
 };
 
 // My usage
